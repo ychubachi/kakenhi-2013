@@ -1,0 +1,54 @@
+%form: kiban_ab_form_15.tex ; user: kiban_ab_15_other_applications.tex
+%========== S-1-7 基盤研究(A,B)(一般) =========
+%===== p. 15 研究費の応募・受入等の状況・エフォート =============
+\section{研究費の応募・受入等の状況・エフォート}
+\KLResetEffort
+
+\subsection{応募中の研究費}
+\KLBeginSinglePage{15}{}
+%frame: f15_otherapp_AB
+%f: 2008-10-15 Adjusted for the corrected form. (missing line in the table)
+%f: 2008-10-19 Automatically adjust baseline stretch for the title.
+%f: 2009-10-02 Adjusted to new form.
+
+\ifthenelse{\equal{\研究種別}{C}}{%
+	%f: pass
+}{%
+	\put(121,542.5){\研究種別}% A, B
+}
+
+\put(110,529.5){
+%f:    	\small{
+	\研究期間の最終元号年度
+%f:	}
+    }
+    
+\renewcommand{\KLY}{553}
+\renewcommand{\KLYa}{513}
+
+    \KLNoMarginMinipage{67}{553}{549}{
+    	\begingroup
+		\setlength{\tabcolsep}{2pt}
+		\begin{tabular}[t]{p{102pt}p{106pt}>{\KLCC}p{33pt}>{\KLCR}p{49pt}>{\KLCC}p{27pt}p{143pt}}
+			& \研究課題名
+			& \phantom{最小限} \phantom{の高さ}
+			&
+%begin 本人の研究経費 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+			 \本人の研究経費
+%end
+			& \本応募effort 
+			& 
+			(総額 \NumC{KLAnnualSum0} 千円)
+			 \\
+			\hline
+			%begin 応募中の研究費　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+			\応募中の研究費
+			%end 応募中の研究費　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+		\end{tabular}
+	\endgroup
+    }
+
+	\KLBottomInfo{83}{67}{141}{352}{446}{546}
+\KLEndSinglePage
+%U:%====== end of page =====================================
+

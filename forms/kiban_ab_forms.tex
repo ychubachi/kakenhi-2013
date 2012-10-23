@@ -1,0 +1,30 @@
+% kiban_ab_forms
+%=======================================
+\ifthenelse{\boolean{BudgetSummary}}{
+	\KLTypesetPage{13}
+	\KLTypesetPage{14}
+}{}
+	
+\ifthenelse{\boolean{BudgetSummary}\OR \boolean{klTypesetPage0}}{
+	\input{forms/coverpage}
+}{}
+
+\KLInputIfPageInRangeIsSelected{1}{2}{forms/kiban_ab_form_01-02}
+\KLInputIfPageInRangeIsSelected{3}{5}{forms/kiban_ab_form_03-05}
+\KLInputIfSelected{6}{forms/kiban_ab_form_06}
+\KLInputIfPageInRangeIsSelected{7}{9}{forms/kiban_ab_form_07-09}
+\KLInputIfSelected{10}{forms/kiban_ab_form_10}
+\KLInputIfSelected{11}{forms/kiban_ab_form_11}
+\KLInputIfSelected{12}{forms/kiban_ab_form_12}
+\KLInputIfSelected{13}{forms/kiban_ab_form_13}
+\KLInputIfSelected{14}{forms/kiban_ab_form_14}
+
+\ifthenelse{\boolean{BudgetSummary}}{
+	\input{forms/form90_summary}
+}{%
+}
+
+\KLInputIfSelected{15}{forms/kiban_ab_form_15}
+\KLInputIfSelected{16}{forms/kiban_ab_form_16}
+
+%========================================
